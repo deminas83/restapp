@@ -36,6 +36,9 @@ public class Person {
     @Column(name = "updated_at")
     private LocalDateTime updatedAt;
 
+    @Column(name = "created_who")
+    private String createdWho;
+
     public String getCreatedWho() {
         return createdWho;
     }
@@ -60,17 +63,7 @@ public class Person {
         this.createdAt = createdAt;
     }
 
-    @Column(name = "created_who")
-    @NotEmpty
-    private String createdWho;
-
     public Person() {
-
-    }
-
-    public Person(String name, int age) {
-        this.name = name;
-        this.age = age;
     }
 
     public int getId() {
